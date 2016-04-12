@@ -1,0 +1,28 @@
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/Lw21H9Fiy2.dsk -m 4 -net none -nographic -monitor null
+PiLo hda1
+Loading..........
+Kernel command line: -q run priority-donate-one
+Pintos booting with 4,088 kB RAM...
+382 pages available in kernel pool.
+382 pages available in user pool.
+Calibrating timer...  419,020,800 loops/s.
+Boot complete.
+Executing 'priority-donate-one':
+(priority-donate-one) begin
+(priority-donate-one) This thread should have priority 32.  Actual priority: 31.
+(priority-donate-one) This thread should have priority 33.  Actual priority: 31.
+(priority-donate-one) acquire2, acquire1 must already have finished, in that order.
+(priority-donate-one) This should be the last line before finishing this test.
+(priority-donate-one) end
+Execution of 'priority-donate-one' complete.
+(priority-donate-one) acquire1: got the lock
+Kernel PANIC at ../../lib/kernel/list.c:251 in list_remove(): assertion `is_interior (elem)' failed.
+Call stack: 0xc0027c12.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 24 ticks
+Thread: 0 idle ticks, 24 kernel ticks, 0 user ticks
+Console: 1061 characters output
+Keyboard: 0 keys pressed
+Powering off...
